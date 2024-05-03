@@ -1,0 +1,104 @@
+*{ margin: 0 0 0 0; padding: 0 0 0 0; }
+        header, footer{
+            background-color: #87afeb;
+            width: 100%;
+            height: 65px;
+        }
+        nav {   height: 65px; }
+        nav ul {  height: 65px; }
+
+        nav li {
+            display: inline;
+            border-right: 2px solid white;
+            color:white;
+            font-size: 20px;
+            height: 65px;          
+            width: 333px;
+        }
+        #nav1{
+            font-size: 30px;
+            height: 49px;
+            position: absolute;
+            top: 0px;
+            padding-top: 18px;
+            padding-left: 150px;
+
+        }
+        #nav2{
+            position: absolute;
+            top: 0px;
+            left: 492px;
+            padding-top: 24px;
+            padding-left: 150px;
+            height: 43px;
+            width: 289px;
+        }
+        #nav3{
+            width: 20%;
+            position: absolute;
+            top: 0px;
+            left: 934px;
+            border-right-width: 0px;
+            padding-top: 18px;
+            padding-left: 45px;
+            height: 49px;
+            width: 386px;
+        }
+        #text{  padding: 0px 3px 0px 3px ; font-size: 19px; }
+        #nav4{  width: 19%; }
+        #Buscar{
+            font-size: 23px;
+            display: inline;
+        }
+        #whiteboard{
+            /* border: 2px dotted purple; */
+            margin: 20px 350px 20px 350px;
+            height: 410px;
+        }
+        .profile{
+        
+            background-color: #f5f5f5;
+            height: 130px ;
+            width: 130px;
+            box-shadow: 2px 2px 0px 0px #c7cbcc;
+            /* border: 2px dotted blue; */
+            list-style-type: none;
+            position: absolute;
+        }
+        .image{
+            width: 72px;
+            height: 90px;
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+
+        .fila1{top:87px; }
+        .fila2{top:229px; }
+        .fila3{top:371px; }
+        .columna1{ left: 352px; }
+        .columna2{ left: 528px; }
+        .columna3{ left: 701px; }
+        .columna4{ left: 878px; }
+
+        .UnoMismo{   margin-left: 10px; }
+        .JuanA{   margin-left: 3px;  }
+        .MaritzaR{   margin-left: 5px;  }
+        .EmiliaC{   margin-left: 21px;  }
+        .EnriqueC{   margin-left: 17px;  }
+        .MariaE{   margin-left: 9px;  }
+        .RonaldG{   margin-left: 10px;  }
+
+        footer{
+            position: absolute;
+            top: 87%;
+            height: 13%;
+            display: table;
+        }
+        footer span{
+            vertical-align: middle;
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            display: table-cell;
+        }
