@@ -74,6 +74,34 @@ nav li {
     list-style-type: none;
     position: absolute;
 }
+
+.profile:hover{
+    transform: scale(1.1) rotate(10deg);
+    background-color: #a0c3d7;
+    transition: background-color 0.5s ease, transform 0.5s ease-in-out;
+}
+
+.profile:not(:hover){
+    transform: scale(1) rotate(0deg);
+    background-color: #f5f5f5;
+    transition: background-color 0.5s ease, transform 0.5s ease-in-out;
+}
+
+
+
+@keyframes profileHover{
+    0% { }
+
+    100% { 
+        width: 160px;
+        height: 160px;
+        rotate: 30deg;
+    }
+}
+
+
+
+
 .image{
     width: 72px;
     height: 90px;
