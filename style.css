@@ -87,8 +87,6 @@ nav li {
     transition: background-color 0.5s ease, transform 0.5s ease-in-out;
 }
 
-
-
 @keyframes profileHover{
     0% { }
 
