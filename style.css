@@ -1,166 +1,204 @@
+/* PAGINA PRINCIPAL  */
+html{
+    height: 100%;
+    width: 100%;
+}
 #mainpage-body, nav{
     margin: 0 0 0 0;
     padding: 0 0 0 0;
+    width: 100%;
 }
+
+#mainpage-body{
+    height: 75%;
+}
+
 header, footer{
     background-color: #87afeb;
     width: 100%;
-    height: 65px;    
 }
 header{
-    position: absolute;
-    top:0px;
+    margin: 0 0 0 0;
+    height: 12%;
 }
-nav {   height: 65px; 
-        top: 0px;
+nav {   
+    height: 100%; 
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
 }
-nav ul {  height: 65px; }
-
-nav li {
-    display: inline;
-    border-right: 2px solid white;
+nav > div {
     color:white;
-    font-size: 20px;
-    height: 65px;          
-    width: 333px;
-}
-#nav1{
-    font-size: 30px;
-    height: 49px;
-    position: absolute;
-    top: 0px;
-    padding-top: 18px;
-    padding-left: 150px;
-
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 #nav2{
-    position: absolute;
-    top: 0px;
-    left: 492px;
-    padding-top: 24px;
-    padding-left: 150px;
-    height: 43px;
-    width: 289px;
+    border-left: 0.5px solid white;
+    border-right: 0.5px solid white;
 }
-#nav3{
-    width: 20%;
-    position: absolute;
-    top: 0px;
-    left: 934px;
-    border-right-width: 0px;
-    padding-top: 18px;
-    padding-left: 45px;
-    height: 49px;
-    width: 386px;
-}
-#text{  padding: 0px 3px 0px 3px ; font-size: 19px; }
-#nav4{  width: 19%; }
-#Buscar{
-    font-size: 23px;
-    display: inline;
-}
+#text{  padding: 0px 3px 0px 3px ; }
+
 #whiteboard{
     /* border: 2px dotted purple; */
-    margin: 20px 350px 20px 350px;
-    height: 410px;
+    width: 70%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+    margin: 3% 15% 3% 15%;
 }
+
 .profile{
-
     background-color: #f5f5f5;
-    height: 130px ;
-    width: 130px;
     box-shadow: 2px 2px 0px 0px #c7cbcc;
-    /* border: 2px dotted blue; */
-    list-style-type: none;
-    position: absolute;
+    display: flex;
+    justify-content: center;        
+    flex-wrap: wrap;
 }
-
 .profile:hover{
     transform: scale(1.1) rotate(10deg);
     background-color: #a0c3d7;
     transition: background-color 0.5s ease, transform 0.5s ease-in-out;
 }
-
 .profile:not(:hover){
     transform: scale(1) rotate(0deg);
     background-color: #f5f5f5;
     transition: background-color 0.5s ease, transform 0.5s ease-in-out;
 }
-
-@keyframes profileHover{
-    0% { }
-
-    100% { 
-        width: 160px;
-        height: 160px;
-        rotate: 30deg;
-    }
-}
-
-.image{
-    width: 72px;
-    height: 90px;
-    margin-left: 30px;
-    margin-top: 10px;
-}
-
-.fila1{top:87px; }
-.fila2{top:229px; }
-.fila3{top:371px; }
-.columna1{ left: 352px; }
-.columna2{ left: 528px; }
-.columna3{ left: 701px; }
-.columna4{ left: 878px; }
-
-.UnoMismo{   margin-left: 10px; }
-.JuanA{   margin-left: 3px;  }
-.MaritzaR{   margin-left: 5px;  }
-.EmiliaC{   margin-left: 21px;  }
-.EnriqueC{   margin-left: 17px;  }
-.MariaE{   margin-left: 9px;  }
-.RonaldG{   margin-left: 10px;  }
-
 footer{
-    position: absolute;
-    top: 87%;
     height: 13%;
-    display: table;
+    /* margin-top: 20%; */
+    position: fixed;
+    bottom: 0;
 }
 footer span{
-    vertical-align: middle;
-    text-align: center;
-    display: inline-block;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
-    display: table-cell;
+}
+
+@media screen and (min-width: 1201px){
+    /* body{   background-color: red ; } */
+    
+    nav > div {     font-size: /*20px;*/   1.25em;  }
+    #nav1{      font-size: /*30px;*/  2.5em;   }    
+    #text{      font-size: /*19px;*/ 0.9em;  width: 200px; }
+    #Buscar{    font-size: /*23px;*/ 1em;   }
+    #whiteboard{    row-gap: 10%;   column-gap: 3%;  }
+    #mi-imagen{ background-image: url("./28304720/28304720Grande.jpg");  background-size:contain ;  }
+    .profile{       height: 130px;  width: 130px;   margin-bottom: 2%; }
+    .profile > span {       font-size: 1em;     }
+    .image{     width: 72px;    height: 90px;   margin-top: 10%;    }
+    footer > span{      font-size: 1em;     }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    /* body{   background-color: blue ;    } */
+    nav > div {     font-size: /*20px;*/   1.07em;  }
+    #nav1{      font-size: /*30px;*/  2.13em;   }    
+    #text{      font-size: /*19px;*/ 0.77em;   width: 170.69px; }
+    #Buscar{    font-size: /*23px;*/ 0.85em;   }
+    #whiteboard{    row-gap: 10%;   column-gap: 3%;  }
+    #mi-imagen{ background-image: url("./28304720/28304720Grande.jpg");  background-size:contain ;  }
+    .profile{       height: 110px;  width: 110px;   margin-bottom: 2%; }
+    .profile > span {       font-size: 0.875em;         }
+    .image{     width: 60.92px;    height: 76.15px;   margin-top: 10%;    }
+    footer > span{      font-size: 0.85em;     }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* body{   background-color: yellow ;  } */
+    nav > div {     font-size: /*20px;*/   0.8em;  }
+    #nav1{      font-size: /*30px;*/  1.6em;   }    
+    #text{      font-size: /*19px;*/ 0.58em;   width: 128.05px;}
+    #Buscar{    font-size: /*23px;*/ 0.64em;   }
+    #whiteboard{    row-gap: 10%;   column-gap: 3%;  }
+    #mi-imagen{ background-image: url("./28304720/28304720Grande.jpg");  background-size:contain ;  }
+    .profile{       height: 90px;  width: 90px;   margin-bottom: 2%; }
+    .profile > span {       font-size: 0.625em;         }
+    .image{     width: 49.85px;    height: 62.31px;   margin-top: 10%;    }
+    footer > span{      font-size: 0.64em;     }
+    
+    
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    /* body{   background-color: gray ;    } */
+
+    nav > div {     font-size: /*20px;*/   0.5em;  }
+    #nav1{      font-size: /*30px;*/  1em;   }    
+    #text{      font-size: /*19px;*/ 0.36em;   width: 80.1px;}
+    #Buscar{    font-size: /*23px;*/ 0.4em;   }
+    #whiteboard{    row-gap: 10%;   column-gap: 3%;  }
+    #mi-imagen{ background-image: url("./28304720/28304720Pequena.jpg");  background-size:contain ;  }
+    .profile{       height: 70px;  width: 70px;   margin-bottom: 2%; }
+    .profile > span {       font-size: 0.5em;         }
+    .image{     width: 38.77px;    height: 48.46px;   margin-top: 10%;    }
+    footer > span{      font-size: 0.4em;     }
+    
+    
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    /* body{   background-color: black ;   } */
+    
+    nav > div {     font-size: /*20px;*/   0.33em;  }
+    #nav1{      font-size: /*30px;*/  0.67em;   }    
+    #text{      font-size: /*19px;*/ 0.24em;  width: 53.29px; }
+    #Buscar{    font-size: /*23px;*/ 0.27em;   }
+    #whiteboard{    row-gap: 10%;   column-gap: 3%;  }
+    #mi-imagen{ background-image: url("./28304720/28304720Pequena.jpg");  background-size:contain ;  }
+    .profile{       height: 50px;  width: 50px;   margin-bottom: 2%; }
+    .profile > span {       font-size: 0.38em;         }
+    .image{     width: 27.69px;    height: 34.62px;   margin-top: 10%;    }
+    footer > span{      font-size: 0.27em;     }
+    
+}
+
+@media screen and (max-width: 319px) {
+    /* body{   background-color: limegreen ;   } */
+    
+    nav > div {     font-size: /*20px;*/   0.2em;  }
+    #nav1{      font-size: /*30px;*/  0.47em;   }    
+    #text{      font-size: /*19px;*/ 0.10em;  width: 30px; }
+    #Buscar{    font-size: /*23px;*/ 0.14em;   height: 10px; width: 3px; font-size: 0.14em;}
+    #whiteboard{    row-gap: 10%;   column-gap: 3%;  }
+    #mi-imagen{ background-image: url("./28304720/28304720Pequena.jpg");  background-size:contain ;  }
+    .profile{       height: 50px;  width: 50px;   margin-bottom: 2%; }
+    .profile > span {       font-size: 0.38em;         }
+    .image{     width: 27.69px;    height: 34.62px;   margin-top: 10%;    }
+    footer > span{      font-size: 0.27em;     }
+
 }
 
 
-
-
-.profile-p, .profile-span{
-    font-size: 18px;
+/* PÁGINA PERFIL   */
+#perfil-body{
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
 }
-#foto{
-    height: 354px;
-    margin-top : 8px;
-    margin-left: 97px;
-    border-top-left-radius: 100px 100px;
+
+#mi-foto{
+    height: 65.3%;
+    /* margin-top : 8px; */
+    margin-left: 8%;
+    border-top-left-radius: 28.25% 28.25%;
 }
 #info{
     border-style:solid;
     border-width: 2px;
-    position: absolute;
-    top:16px;
-    left: 390px;
-    width : 760px;
-    height: 350px;
+    width : 60%;
+    height: 64.8%;
     padding: 0px 6px 0px 6px ;
     box-shadow: 3px 3px 0px 1px gray;
+    max-height: 70%;
 }
 #nombre{
     color:red;
-    font-size:54px;
     font-weight: bolder;
 }
 #descripcion{
@@ -174,4 +212,29 @@ footer span{
 }
 #mail:visited{
     color:red;
+}
+
+@media screen and (min-width: 1201px){
+    #nombre{    font-size:400%; }
+    .profile-p, .profile-span{  font-size: 100%;    }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    #nombre{    font-size:300%; }
+    .profile-p, .profile-span{  font-size: 90%; }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #nombre{    font-size:200%; }
+    .profile-p, .profile-span{  font-size: 75%; }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    #nombre{    font-size:150%; }
+    .profile-p, .profile-span{  font-size: 50%; }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    #nombre{    font-size:95%;  }
+    .profile-p, .profile-span{  font-size: 1%;  }    
+}
+@media screen and (max-width: 319px) {
+    #nombre{    font-size:95%;  }
+    .profile-p, .profile-span{  font-size: 0.01%;   }
 }
