@@ -1,0 +1,13 @@
+{
+	"nombre":"Juan Pablo Rivas",
+	"descripcion":"Soy un estudiante del 9no semestre en la Licenciatura en Computación de la UCV. Soy Presidente del Centro de Estudiantes de Computación, Auxiliar Docente del Centro de Investigación y Sistemas de Información de la Escuela de Computación y miembro del Grupo de Extensión MUVA, también en la UCV.",
+	"color": "Negro",
+	"libro": ["Legend"],
+	"musica": ["Alternativa"],
+	"video_juego":["LoL","Minecraft","Genshin Impact","Valorant (Cuando me servía)"],
+	"lenguajes":["C++","C","JavaScript","Python","PHP","Java","Go"],
+	"email":"juanprivasr@gmail.com",
+	"ci":"28304720",
+	"genero":"masculino",
+	"fecha_nacimiento":"19/07/2001"
+}
