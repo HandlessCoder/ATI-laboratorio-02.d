@@ -44,12 +44,12 @@ nav > div {
 
 #whiteboard{
     /* border: 2px dotted purple; */
-    width: 70%;
+    width: 80%;
     display: flex;
     flex-flow: row wrap;
     align-content: center;
     justify-content: center;
-    margin: 3% 15% 3% 15%;
+    margin: 3% 10% 3% 10%;
 }
 
 .profile{
@@ -90,7 +90,7 @@ footer span{
     #nav1{      font-size: /*30px;*/  2.5em;   }    
     #text{      font-size: /*19px;*/ 0.9em;  width: 200px; }
     #Buscar{    font-size: /*23px;*/ 1em;   }
-    #whiteboard{    row-gap: 10%;   column-gap: 3%;  }
+    #whiteboard{    row-gap: 4%;   column-gap: 3%;  }
     #mi-imagen{ background-image: url("./28304720/28304720Grande.jpg");  background-size:contain ;  }
     .profile{       height: 130px;  width: 130px;   margin-bottom: 2%; }
     .profile > span {       font-size: 1em;     }
@@ -103,7 +103,7 @@ footer span{
     #nav1{      font-size: /*30px;*/  2.13em;   }    
     #text{      font-size: /*19px;*/ 0.77em;   width: 170.69px; }
     #Buscar{    font-size: /*23px;*/ 0.85em;   }
-    #whiteboard{    row-gap: 10%;   column-gap: 3%;  }
+    #whiteboard{    row-gap: 4%;   column-gap: 3%;  }
     #mi-imagen{ background-image: url("./28304720/28304720Grande.jpg");  background-size:contain ;  }
     .profile{       height: 110px;  width: 110px;   margin-bottom: 2%; }
     .profile > span {       font-size: 0.875em;         }
@@ -117,7 +117,7 @@ footer span{
     #nav1{      font-size: /*30px;*/  1.6em;   }    
     #text{      font-size: /*19px;*/ 0.58em;   width: 128.05px;}
     #Buscar{    font-size: /*23px;*/ 0.64em;   }
-    #whiteboard{    row-gap: 10%;   column-gap: 3%;  }
+    #whiteboard{    row-gap: 4%;   column-gap: 3%;  }
     #mi-imagen{ background-image: url("./28304720/28304720Grande.jpg");  background-size:contain ;  }
     .profile{       height: 90px;  width: 90px;   margin-bottom: 2%; }
     .profile > span {       font-size: 0.625em;         }
@@ -133,7 +133,7 @@ footer span{
     #nav1{      font-size: /*30px;*/  1em;   }    
     #text{      font-size: /*19px;*/ 0.36em;   width: 80.1px;}
     #Buscar{    font-size: /*23px;*/ 0.4em;   }
-    #whiteboard{    row-gap: 10%;   column-gap: 3%;  }
+    #whiteboard{    row-gap: 4%;   column-gap: 3%;  }
     #mi-imagen{ background-image: url("./28304720/28304720Pequena.jpg");  background-size:contain ;  }
     .profile{       height: 70px;  width: 70px;   margin-bottom: 2%; }
     .profile > span {       font-size: 0.5em;         }
@@ -149,7 +149,7 @@ footer span{
     #nav1{      font-size: /*30px;*/  0.67em;   }    
     #text{      font-size: /*19px;*/ 0.24em;  width: 53.29px; }
     #Buscar{    font-size: /*23px;*/ 0.27em;   }
-    #whiteboard{    row-gap: 10%;   column-gap: 3%;  }
+    #whiteboard{    row-gap: 4%;   column-gap: 3%;  }
     #mi-imagen{ background-image: url("./28304720/28304720Pequena.jpg");  background-size:contain ;  }
     .profile{       height: 50px;  width: 50px;   margin-bottom: 2%; }
     .profile > span {       font-size: 0.38em;         }
@@ -165,7 +165,7 @@ footer span{
     #nav1{      font-size: /*30px;*/  0.47em;   }    
     #text{      font-size: /*19px;*/ 0.10em;  width: 30px; }
     #Buscar{    font-size: /*23px;*/ 0.14em;   height: 10px; width: 3px; font-size: 0.14em;}
-    #whiteboard{    row-gap: 10%;   column-gap: 3%;  }
+    #whiteboard{    row-gap: 4%;   column-gap: 3%;  }
     #mi-imagen{ background-image: url("./28304720/28304720Pequena.jpg");  background-size:contain ;  }
     .profile{       height: 50px;  width: 50px;   margin-bottom: 2%; }
     .profile > span {       font-size: 0.38em;         }
