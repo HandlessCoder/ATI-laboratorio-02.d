@@ -62,6 +62,9 @@ nav > div {
     justify-content: center;        
     flex-wrap: wrap;
 }
+.profile>span{
+    text-align: center;
+}
 .profile:hover{
     transform: scale(1.1) rotate(10deg);
     background-color: #a0c3d7;
