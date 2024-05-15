@@ -12,7 +12,9 @@ html{
 #mainpage-body{
     height: 75%;
 }
-
+sub{
+    font-size: 50%;
+}
 header, footer{
     background-color: #87afeb;
     width: 100%;
@@ -53,6 +55,9 @@ nav > div {
 }
 #whiteboard>a{
     margin-bottom: 2%;
+}
+#noMatch{
+    color: #87afeb;
 }
 
 .profile{

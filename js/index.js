@@ -1,4 +1,13 @@
-window.addEventListener('load',funcionInicio());
+window.addEventListener('load', () => {
+    funcionInicio();
+    window.addEventListener('load',showProfile())
+    document.getElementById("Buscar").addEventListener("click",
+        () => buscar(document.getElementById("text").value));
+                
+        document.getElementById("text").addEventListener('keydown',
+        (e)  => {  if (e.key ==="Enter")   buscar(document.getElementById("text").value); 
+    });
+});
 
 function funcionInicio(){
     if(window.location.pathname === "/index.html"){
@@ -37,8 +46,6 @@ function funcionInicio(){
     }//else console.log('No estoy en inicio')
 }
 
-window.addEventListener('load',showProfile())
-
 function SumarInnerPorId(id,valor,antes = false){
     if(typeof valor === 'object'){
         if(valor.length == 1)
@@ -59,9 +66,42 @@ function SumarInnerPorId(id,valor,antes = false){
     else    document.getElementById(id).innerHTML = valor + document.getElementById(id).innerHTML;
 }
 
+function buscar(nombre){
+    let fondo = document.getElementById('whiteboard');
+    fondo.innerHTML="";
+
+    let parametros = window.location.search;
+    let searchParams = new URLSearchParams(parametros);
+    let idioma = searchParams.get('lan');
+    
+    if(!(idioma==='EN'||idioma==='PT'||idioma==='ES'))  idioma = 'ES'
+
+    let hayResultado = false;
+    fetch('datos/index.json').
+    then(response => response.json()).
+    then(listaPersonas => {    
+        listaPersonas.forEach(persona => {
+            let expReg = new RegExp(nombre,"i");
+            if(persona.nombre.match(expReg)){
+                hayResultado = true;
+                console.log(hayResultado)
+
+                fondo.innerHTML+=  `<a href = "perfil.html?ci=${persona.ci}&lan=${idioma}"><div class="profile"> <img src="${persona.imagen}" class="image" title=""> <br> <span>${persona.nombre}</span></div></a>`
+            }});
+            if(!hayResultado){
+                console.log(hayResultado)
+                fetch(`conf/config${idioma}.json`).
+                then(response => response.json()).
+                then(listaTextos => {
+                    textos = listaTextos.not_found.split("[query]");
+                    fondo.innerHTML+=`<span id="noMatch"> ${textos[0]} "${document.getElementById("text").value}" ${textos[1]} </span>`
+                })
+            }
+    })
+}
+
 function showProfile(){
     if(window.location.pathname==="/perfil.html"){
-
         let parametros = window.location.search;
         let searchParams = new URLSearchParams(parametros);
         let idioma = searchParams.get('lan');
@@ -78,7 +118,6 @@ function showProfile(){
             SumarInnerPorId('lenguajes-pregunta',listaTextos.lenguajes)
             
             let cedula = searchParams.get('ci');
-            
             fetch(`${cedula}/perfil.json`).
             then(response => response.json()).
             then( listaAtributos => {
@@ -87,8 +126,9 @@ function showProfile(){
                 fetch('datos/index.json').
                 then(response => response.json()).
                 then(listaPersonas => {    
-                    document.getElementById('mi-foto').setAttribute("src",listaPersonas.
-                    find(persona => persona.ci == cedula).imagen);
+                    let personaActual = listaPersonas.find(persona => persona.ci == cedula);
+                    document.title = `Perfil: ${personaActual.nombre}`;
+                    document.getElementById('mi-foto').setAttribute("src",personaActual.imagen);
                 })
                 SumarInnerPorId('descripcion',listaAtributos.descripcion)
                 SumarInnerPorId('color-respuesta',listaAtributos.color)

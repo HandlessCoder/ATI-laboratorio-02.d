@@ -15,5 +15,8 @@
 	"musica":"My favorite music style",
 	"video_juego":"Favorite video games",
 	"lenguajes":"Languages learned",
-	"email":"Please send me a email to [email], if you need to contact me"
+	"email":"Please send me a email to [email], if you need to contact me",
+	"not_found":"There are no students who have [query] into their names"
+
+
 }

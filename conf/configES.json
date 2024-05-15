@@ -12,5 +12,6 @@
 	"lenguajes":"Lenguajes aprendidos",
 	"email":"Si necesitan comunicarse conmigo me pueden escribir a [email]",
 	"buscar": "Buscar",
-	"saludo": "Hola"
+	"saludo": "Hola",
+	"not_found":"No hay alumnos que tengan [query] en su nombre"
 }
