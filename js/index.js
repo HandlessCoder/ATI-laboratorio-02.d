@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
 });
 
 function funcionInicio(){
-    if(window.location.pathname === "/index.html"){
+    if(window.location.pathname === "/index.html" ||  window.location.pathname === "/"){
         let parametros = window.location.search;
         let searchParams = new URLSearchParams(parametros);
         let idioma = searchParams.get('lan');
@@ -39,7 +39,7 @@ function funcionInicio(){
             listaPersonas.forEach(persona => {
                 // console.log(persona.nombre+" "+persona.ci+"\n");
                 let contenedor = document.getElementById('whiteboard');
-                contenedor.innerHTML+=  `<a href = "perfil.html?ci=${persona.ci}&lan=${idioma}"><div class="profile"> <img src="${persona.imagen}" class="image" title=""> <br> <span>${persona.nombre}</span></div></a>`
+                contenedor.innerHTML+=  `<a href = "perfil.html?ci=${persona.ci}&lan=${idioma}"><div class="profile"> <img src="directorio\/${persona.imagen}" class="image" title=""> <br> <span>${persona.nombre}</span></div></a>`
 
             });
         })
@@ -86,7 +86,7 @@ function buscar(nombre){
                 hayResultado = true;
                 console.log(hayResultado)
 
-                fondo.innerHTML+=  `<a href = "perfil.html?ci=${persona.ci}&lan=${idioma}"><div class="profile"> <img src="${persona.imagen}" class="image" title=""> <br> <span>${persona.nombre}</span></div></a>`
+                fondo.innerHTML+=  `<a href = "perfil.html?ci=${persona.ci}&lan=${idioma}"><div class="profile"> <img src="directorio\/${persona.imagen}" class="image" title=""> <br> <span>${persona.nombre}</span></div></a>`
             }});
             if(!hayResultado){
                 console.log(hayResultado)
@@ -118,7 +118,7 @@ function showProfile(){
             SumarInnerPorId('lenguajes-pregunta',listaTextos.lenguajes)
             
             let cedula = searchParams.get('ci');
-            fetch(`${cedula}/perfil.json`).
+            fetch(`directorio/${cedula}/perfil.json`).
             then(response => response.json()).
             then( listaAtributos => {
                 document.getElementById('nombre').innerHTML= listaAtributos.nombre;
@@ -128,7 +128,7 @@ function showProfile(){
                 then(listaPersonas => {    
                     let personaActual = listaPersonas.find(persona => persona.ci == cedula);
                     document.title = `Perfil: ${personaActual.nombre}`;
-                    document.getElementById('mi-foto').setAttribute("src",personaActual.imagen);
+                    document.getElementById('mi-foto').setAttribute("src","directorio\/"+personaActual.imagen);
                 })
                 SumarInnerPorId('descripcion',listaAtributos.descripcion)
                 SumarInnerPorId('color-respuesta',listaAtributos.color)
