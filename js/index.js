@@ -1,3 +1,5 @@
+
+
 window.addEventListener('load', () => {
     funcionInicio();
     window.addEventListener('load',showProfile())
@@ -10,7 +12,9 @@ window.addEventListener('load', () => {
 });
 
 function funcionInicio(){
-    if(window.location.pathname === "/index.html" ||  window.location.pathname === "/"){
+    if( document.title == "ATI[UCV] 2024-1"
+    // window.location.pathname === "/index.html" ||  window.location.pathname === "/"
+){
         let parametros = window.location.search;
         let searchParams = new URLSearchParams(parametros);
         let idioma = searchParams.get('lan');
@@ -101,7 +105,10 @@ function buscar(nombre){
 }
 
 function showProfile(){
-    if(window.location.pathname==="/perfil.html"){
+    if(
+        document.title.match(new RegExp("Perfil:"))
+        // window.location.pathname==="/perfil.html"
+    ){
         let parametros = window.location.search;
         let searchParams = new URLSearchParams(parametros);
         let idioma = searchParams.get('lan');
