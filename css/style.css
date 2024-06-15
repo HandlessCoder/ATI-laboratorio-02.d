@@ -3,14 +3,11 @@ html{
     height: 100%;
     width: 100%;
 }
-#mainpage-body, nav{
+body, #mainpage-body, #profile-body {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
-    width: 100%;
-}
-
-#mainpage-body{
-    height: 75%;
+    width: 100%; 
+    height: 100%;
 }
 sub{
     font-size: 50%;
@@ -21,9 +18,12 @@ header, footer{
 }
 header{
     margin: 0 0 0 0;
-    height: 12%;
+    height: 9%;
 }
 nav {   
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    width: 100%;
     height: 100%; 
     display: flex;
     flex-flow: row wrap;
@@ -42,6 +42,11 @@ nav > div {
     border-left: 0.5px solid white;
     border-right: 0.5px solid white;
 }
+#main-user{
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+}
 #text{  padding: 0px 3px 0px 3px ; }
 
 #whiteboard{
@@ -53,7 +58,7 @@ nav > div {
     justify-content: center;
     margin: 3% 10% 3% 10%;
 }
-#whiteboard>a{
+#whiteboard>div{
     margin-bottom: 2%;
 }
 #noMatch{
@@ -74,6 +79,7 @@ nav > div {
     transform: scale(1.1) rotate(10deg);
     background-color: #a0c3d7;
     transition: background-color 0.5s ease, transform 0.5s ease-in-out;
+    cursor:pointer;
 }
 .profile:not(:hover){
     transform: scale(1) rotate(0deg);
@@ -187,13 +193,25 @@ footer span{
 
 
 /* PÁGINA PERFIL   */
-#perfil-body{
-    display: flex;
-    flex-flow: row wrap;
+#atras{
+    margin-left: 7%;
+}
+#atras-anchor{
+    color:orangered;
+    text-decoration: none;
+}
+
+#profile-body{
+    margin-top:1%;
     height: 100%;
 }
 
-
+#info-container{
+    display: flex;
+    flex-flow: row wrap;
+    margin-top:1%;
+    height: 100%;
+}
 
 #mi-foto{
     height: 65.3%;
@@ -231,24 +249,30 @@ footer span{
 @media screen and (min-width: 1201px){
     #nombre{    font-size:400%; }
     .profile-p, .profile-span{  font-size: 100%;    }
+    #atras{font-size: 32px;}
 }
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
     #nombre{    font-size:300%; }
     .profile-p, .profile-span{  font-size: 90%; }
+    #atras{font-size: 28px;}
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     #nombre{    font-size:200%; }
     .profile-p, .profile-span{  font-size: 75%; }
+    #atras{font-size: 24px;}
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
     #nombre{    font-size:150%; }
     .profile-p, .profile-span{  font-size: 50%; }
+    #atras{font-size: 16px;}
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
     #nombre{    font-size:95%;  }
     .profile-p, .profile-span{  font-size: 1%;  }    
+    #atras{font-size: 12px;}
 }
 @media screen and (max-width: 319px) {
     #nombre{    font-size:95%;  }
     .profile-p, .profile-span{  font-size: 0.01%;   }
+    #atras{font-size: 8px;}
 }

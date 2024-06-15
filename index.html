@@ -4,29 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATI[UCV] 2024-1</title>
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/style.css">
-    <link href="./conf/configES.json" as ="json">
-    <script src="./js/index.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="conf/configES.json" as ="json">
+    <script src="js/index.js"></script>
 
 </head>
-<body id="mainpage-body">
-    <header>
-        <nav>
-            <div id="nav1" class="nav-cells"><sub></sub></div>
-            <div id="nav2" class="nav-cells"><a href=""></a></div>
-            <div id= "nav3" class="nav-cells">
-                <input type="text" placeholder="Nombre..." id="text">
-                <button id="Buscar"></button>
+<body>
+    <div id="mainpage-body">
+        <header>
+            <nav>
+                <div id="nav1" class="nav-cells"><sub></sub></div>
+                <div id="nav2" class="nav-cells"><a href=""></a></div>
+                <div id= "nav3" class="nav-cells">
+                    <input type="text" placeholder="Nombre..." id="text">
+                    <button id="Buscar"></button>
+                </div>
+            </nav>
+            
+        </header>
+        <section id="whiteboard">
+            
+        </section>
+        <footer>
+            <span id="copyright"></span>
+        </footer>
+    </div>
+
+    <div id="profile-body">
+
+        <span id="atras"><a id="atras-anchor" href="">◀Volver atrás</a></span>
+        <div id="info-container">
+            <img id="mi-foto">
+            <div id = "info">
+                <span class="profile-span" id="nombre"></span>
+                <p class="profile-p" id="descripcion">
+                    
+                </p>
+                <p class="profile-p">
+                    <span class="profile-span" id="color-pregunta"></span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="profile-span" id="color-respuesta"></span><br>
+                    <span class="profile-span" id="libro-pregunta"></span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="profile-span" id="libro-respuesta"></span><br>
+                    <span class="profile-span" id="musica-pregunta"></span>&ensp;&ensp;&ensp;<span class="profile-span" id="musica-respuesta"></span><br>
+                    <span class="profile-span" id="juegos-pregunta"></span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="profile-span" id="juegos-respuesta"></span><br>
+                    <strong><span class="profile-span" id="lenguajes-pregunta"></span> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="profile-span" id="lenguajes-respuesta"></strong></span><br><br>
+                    <span class="profile-span" id="correo-pregunta"></span>
+                    
+                    <a href="mailto:juanprivasr@gmail.com" id="mail"><span id="correo-respuesta"></span> </a>
+                </p>
             </div>
-        </nav>
+        </div>
+    </div> 
 
-    </header>
-    <section id="whiteboard">
-
-    </section>
-    <footer>
-        <span id="copyright"></span>
-    </footer>
 </body>
 </html>
